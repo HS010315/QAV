@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Bullet
   - Target
+  - Head
+  - Body
+  - Legs
+  - Arms
   layers:
   - Default
   - TransparentFX

@@ -3,14 +3,15 @@ using UnityEngine;
 public class TargetCollision2 : MonoBehaviour
 {
     public int headshotScore = 10;
-    public int bodyshotScore = 5;
-    public int legshotScore = 2;
+    public int bodyshotScore = 8;
+    public int legshotScore = 6;
+    public int armshotScore = 4;
 
-    private ScoreManager scoreManager;
+    private ScoreManager2 scoreManager2;
 
-    public void Initialize(ScoreManager manager)
+    public void Initialize(ScoreManager2 manager)
     {
-        scoreManager = manager;
+        scoreManager2 = manager;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -24,15 +25,19 @@ public class TargetCollision2 : MonoBehaviour
             // 충돌한 부위에 따라 점수 부여
             if (collider.CompareTag("Head"))
             {
-                scoreManager.AddScore(headshotScore);
+                scoreManager2.AddScore(headshotScore);
             }
             else if (collider.CompareTag("Body"))
             {
-                scoreManager.AddScore(bodyshotScore);
+                scoreManager2.AddScore(bodyshotScore);
             }
             else if (collider.CompareTag("Legs"))
             {
-                scoreManager.AddScore(legshotScore);
+                scoreManager2.AddScore(legshotScore);
+            }
+            else if (collider.CompareTag("Arms"))
+            {
+                scoreManager2.AddScore(armshotScore);
             }
 
 
