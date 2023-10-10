@@ -9,7 +9,7 @@ public class TargetGenerator : MonoBehaviour
     public float spawnInterval = 1f;
     public int numTargets = 20;
     public float targetLifetime = 2f;
-
+    public float waitforStart = 2f;
     private float timer = 0f;
     private int generatedCount = 0;
 
@@ -32,12 +32,14 @@ public class TargetGenerator : MonoBehaviour
     {
         while (generatedCount < numTargets)
         {
+            yield return new WaitForSeconds(waitforStart);
+
             int randomIndex = Random.Range(0, targetPositions.Length);
             Vector3 spawnPosition = targetPositions[randomIndex].position;
             Quaternion spawnRotation = Quaternion.Euler(0f, 0f, 90f);
             GameObject target = Instantiate(targetPrefab, spawnPosition, spawnRotation);
 
-            TargetCollision targetCollision = target.GetComponent<TargetCollision>();
+            TargetCollision targetCollision = target.GetComponent<TargetCollision>();  
             if (targetCollision == null)
                 targetCollision = target.AddComponent<TargetCollision>();
 
