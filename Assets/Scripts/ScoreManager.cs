@@ -9,6 +9,7 @@ public class ScoreManager : MonoBehaviour
     public Text scoreText; // 점수를 표시할 UI 텍스트
 
     private int score = 0; // 현재 점수
+    private int maxScore = 20; // 최대 점수
 
     private XRGrabInteractable grabInteractable; // VR 상호작용 컴포넌트
 
@@ -25,6 +26,7 @@ public class ScoreManager : MonoBehaviour
     private void Start()
     {
         grabInteractable.onSelectEntered.AddListener(OnSelectEntered);
+        UpdateScoreText();
     }
 
     private void OnDestroy()
@@ -34,6 +36,7 @@ public class ScoreManager : MonoBehaviour
             grabInteractable.onSelectEntered.RemoveListener(OnSelectEntered);
         }
     }
+
     private void OnSelectEntered(XRBaseInteractor interactor)
     {
         // 점수 증가
@@ -42,13 +45,13 @@ public class ScoreManager : MonoBehaviour
 
     public void AddScore(int value)
     {
-        score += value;
+        score = Mathf.Clamp(score + value, 0, maxScore); // 최대값을 20으로 제한
         UpdateScoreText();
     }
 
     private void UpdateScoreText()
     {
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = "Score: " + score.ToString() + "/" + maxScore.ToString();
     }
 
     public void ResetScore()

@@ -10,6 +10,10 @@ TagManager:
   - Body
   - Legs
   - Arms
+  - Box
+  - Trail
+  - 10M
+  - 20M
   layers:
   - Default
   - TransparentFX

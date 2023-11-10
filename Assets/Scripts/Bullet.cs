@@ -25,6 +25,27 @@ public class Bullet : MonoBehaviour
 
             DestroyBullet();
         }
+
+        if (collision.gameObject.CompareTag("10M"))
+        {
+            // 파티클 프리팹을 인스턴스화하여 맞은 위치에서 재생시킴
+            GameObject particle = Instantiate(particlePrefab, collision.contacts[0].point, Quaternion.identity);
+            ParticleSystem particleSystem = particle.GetComponent<ParticleSystem>();
+            Destroy(particle, particleSystem.main.duration); // 파티클 재생이 끝난 후에 파괴되도록 설정
+
+            DestroyBullet();
+        }
+
+        if (collision.gameObject.CompareTag("20M"))
+        {
+            // 파티클 프리팹을 인스턴스화하여 맞은 위치에서 재생시킴
+            GameObject particle = Instantiate(particlePrefab, collision.contacts[0].point, Quaternion.identity);
+            ParticleSystem particleSystem = particle.GetComponent<ParticleSystem>();
+            Destroy(particle, particleSystem.main.duration); // 파티클 재생이 끝난 후에 파괴되도록 설정
+
+            DestroyBullet();
+        }
+
     }
 
     private void DestroyBullet()
