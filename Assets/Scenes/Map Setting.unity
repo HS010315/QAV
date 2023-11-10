@@ -12306,8 +12306,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268695896}
-  m_LocalRotation: {x: 0.022062711, y: -0.022062711, z: 0.70676255, w: 0.70676255}
-  m_LocalPosition: {x: -14.14, y: 1.8, z: 10.35}
+  m_LocalRotation: {x: -0.00253093, y: 0.9990223, z: -0.0026694173, w: 0.04405682}
+  m_LocalPosition: {x: -14.078, y: 3.181, z: 10.196}
   m_LocalScale: {x: 0.43833962, y: 0.43833962, z: 0.43833962}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12323,7 +12323,7 @@ Transform:
   - {fileID: 80513746}
   m_Father: {fileID: 0}
   m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 3.576, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0.293, y: 174.949, z: -0.303}
 --- !u!1 &273620480
 GameObject:
   m_ObjectHideFlags: 0
@@ -15397,7 +15397,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 3f589a3ebb2628c4b90d1468bc6404c6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.26
+      value: -14.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f589a3ebb2628c4b90d1468bc6404c6,
         type: 3}
@@ -15407,7 +15407,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 3f589a3ebb2628c4b90d1468bc6404c6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.76
+      value: 14.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3f589a3ebb2628c4b90d1468bc6404c6,
         type: 3}
@@ -26671,7 +26671,7 @@ MonoBehaviour:
   m_InteractionLayers:
     m_Bits: 1
   m_DistanceCalculationMode: 1
-  m_SelectMode: 0
+  m_SelectMode: 1
   m_FocusMode: 2
   m_CustomReticle: {fileID: 0}
   m_AllowGazeInteraction: 0
@@ -26845,7 +26845,7 @@ MonoBehaviour:
   muzzlePoint: {fileID: 1352141101}
   shotPower: 200
   shotSound: {fileID: 8300000, guid: 327b27849bcccd640a921fd115735d42, type: 3}
-  muzzleFlash: {fileID: 6183143568245744915, guid: 9ab5d60c7b14b594a8876ecbfa999b69,
+  muzzleFlash: {fileID: 4019598646070173976, guid: 614d09333fe70484e8bf6d0f2f36af38,
     type: 3}
   animator: {fileID: 0}
 --- !u!1 &1319352655
