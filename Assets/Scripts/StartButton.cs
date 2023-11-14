@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StartButton : MonoBehaviour
 {
     private TargetGenerator targetGenerator;
     public ScoreManager scoreManager;
+    public Text text;
 
     private bool isHit = false;
 
@@ -20,6 +22,7 @@ public class StartButton : MonoBehaviour
         {
             StartCoroutine(StartButtonAction());
             isHit = false; // 한 번만 실행되도록 플래그를 다시 false로 설정
+            text.gameObject.SetActive(false);
         }
     }
 
@@ -31,6 +34,7 @@ public class StartButton : MonoBehaviour
         // 2초 뒤에 실행할 작업 수행
         targetGenerator.RestartGeneration();
         scoreManager.ResetScore();
+        
     }
 
     private void OnCollisionEnter(Collision collision)

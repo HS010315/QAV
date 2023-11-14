@@ -17,7 +17,6 @@ public class TargetGenerator : MonoBehaviour
 
     private void Start()
     {
-        StartGeneration();
     }
 
     private void StartGeneration()
